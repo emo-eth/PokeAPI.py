@@ -91,8 +91,9 @@ class PokeAPI(object):
             raise ValueError('Status code unhandled: ' +
                              str(sc) + ' for URL ' + response.url)
 
-    def get_endpoints(self):
-        query_string = ''
+    def get_endpoints(self, limit=None, offset=None):
+        query_string = '?'
+        query_string += self._limit_offset(limit, offset)
         return self._get(query_string)
 
     def get_move_learn_method(self, id_or_name='', limit=None, offset=None):
