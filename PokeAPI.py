@@ -394,5 +394,3 @@ def make_methods():
         string += '\t\tquery_string += self._param("limit",limit)\n'
         string += '\t\treturn self._get(query_string)\n'
         print(string)
-
-make_methods()
