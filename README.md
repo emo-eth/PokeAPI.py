@@ -1,7 +1,7 @@
 # PokeAPI.py
-Python wrapper for the v2 of the RESTful API hosted at (http://pokeapi.co).  
+Python wrapper for the v2 of the RESTful API hosted at http://pokeapi.co.  
 
-Each endpoint corresponds to a `get_` method of the wrapper. To get a list of all endpoints (all of which take an id or name as a parameter):  
+Each endpoint corresponds to a `get_` method of the wrapper (hyphens replaced with underscores, eg `get_location_area`). To get a list of all endpoints (all of which take an id or name as a parameter):  
 
 >from PokeAPI import PokeAPI
 >
@@ -16,7 +16,8 @@ Returns a result of:
   'location-area': 'http://pokeapi.co/api/v2/location-area/',
   'gender': 'http://pokeapi.co/api/v2/gender/', ...}`  
 
-If not passed an `id` or `name`, each endpoint will return a list of available resources. Each method can take optional `limit` and `offset` parameters, which paginate the listed results accordingly. calling `pk.get_pokemon()` returns a list of the first 20 Pokémon:  
+If not passed an `id` or `name`, each endpoint will return a list of available resources. Each method can take optional `limit` and `offset` parameters, which paginate the listed results accordingly. The default `limit` is 20.  
+Calling `pk.get_pokemon()` returns a list of the first 20 Pokémon:  
 
 ```{'results':
 	[{'url': 'http://pokeapi.co/api/v2/pokemon/1/',
@@ -24,4 +25,6 @@ If not passed an `id` or `name`, each endpoint will return a list of available r
 	{'url': 'http://pokeapi.co/api/v2/pokemon/2/',
 	'name': 'ivysaur'},
 	{'url': 'http://pokeapi.co/api/v2/pokemon/3/',
-	'name': 'venusaur'}, ...}```
+	'name': 'venusaur'}, ...}```  
+
+To get the next 20 pokemon, call `pk.get_pokemon(limit=20, offset=20)`
