@@ -3,11 +3,11 @@ Python wrapper for the v2 of the RESTful API hosted at (http://pokeapi.co).
 
 Each endpoint corresponds to a `get_` method of the wrapper. To get a list of all endpoints (all of which take an id or name as a parameter):  
 
-```from PokeAPI import PokeAPI
-
-pk = PokeAPI()
-
-pk.get_endpoints()```
+>from PokeAPI import PokeAPI
+>
+>pk = PokeAPI()
+>
+>pk.get_endpoints()
 
 Returns a result of:
 
