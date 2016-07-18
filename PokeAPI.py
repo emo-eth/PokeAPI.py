@@ -59,7 +59,7 @@ class PokeAPI(object):
 
         Returns correctly formatted parameter/value'''
         if value:
-            return param + '=' + str(value) + '&'
+            return '&' + param + '=' + str(value)
         else:
             return ''
 
