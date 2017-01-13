@@ -1,7 +1,7 @@
 # PokeAPI.py
 Python wrapper for the v2 of the RESTful API hosted at http://pokeapi.co.  
 
-Each endpoint corresponds to a `get_` method of the wrapper (hyphens replaced with underscores, eg `get_location_area`). To get a list of all endpoints (all of which take an id or name as a parameter):  
+Each endpoint corresponds to a `get_` method of the wrapper (hyphens replaced with underscores, eg `get_location_area`). To get a list of all endpoints (all of which take an `id or name` as a parameter):  
 
 >from PokeAPI import PokeAPI
 >
@@ -9,7 +9,7 @@ Each endpoint corresponds to a `get_` method of the wrapper (hyphens replaced wi
 >
 >pk.get_endpoints()
 
-Returns a result of:
+Which returns:
 
 `{'pokemon': 'http://pokeapi.co/api/v2/pokemon/',
   'version': 'http://pokeapi.co/api/v2/version/',
